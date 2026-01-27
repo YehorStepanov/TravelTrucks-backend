@@ -1,10 +1,11 @@
 import { Router } from 'express';
-import { campersController } from '../controllers/campersController.js';
+import { campersController, campersByIdController} from '../controllers/campersController.js';
 import ctrl from '../helper/CtrlWrapper.js';
 
 const route = Router();
 
-route.get('/campers', ctrl(campersController));
-route.get('/campers/:id', ctrl(campersController));
+route.get('/api/campers', ctrl(campersController));
+route.get('/api/campers/:id', ctrl(campersByIdController));
+
 
 export default route;
