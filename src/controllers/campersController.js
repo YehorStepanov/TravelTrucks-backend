@@ -32,10 +32,12 @@ export async function campersController(req, res) {
     }
   }
 
-  if (form && TRUCK_FORMS.includes(form)) {
-    query.form = form;
-  } else {
+  if (form) {
+    if(TRUCK_FORMS.includes(form)){
+      query.form = form;
+    }else {
     return res.status(400).json({ message: 'Invalid truck form type' });
+  }
   }
 
   //Search campers with pagination
