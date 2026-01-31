@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { campersController, campersByIdController} from '../controllers/campersController.js';
-import ctrl from '../helper/CtrlWrapper.js';
+import ctrl from '../helper/ctrlWrapper.js';
 
 const route = Router();
 
