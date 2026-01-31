@@ -4,8 +4,8 @@ import ctrl from '../helper/ctrlWrapper.js';
 
 const route = Router();
 
-route.get('/api/campers', ctrl(campersController));
 route.get('/api/campers/:id', ctrl(campersByIdController));
+route.get('/api/campers', ctrl(campersController));
 
 
 export default route;
